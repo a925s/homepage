@@ -12,34 +12,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>@yield('title')</title>
 </head>
-<body>
+@section('body_name')
+<body class="app">
+@show
     <div class="container-fluid">
         <div class="home row">
             <div class="header">
                 <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link">NEWS</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">PROFILE</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">SCHEDULE</a></li>
+                    <li class="nav-item"><a href="/news" class="nav-link">NEWS</a></li>
+                    <li class="nav-item"><a href="/profile" class="nav-link">PROFILE</a></li>
+                    <li class="nav-item"><a href="/schedule" class="nav-link">SCHEDULE</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">OFFICIAL</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">GUIDELINE</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="ホームアイコン"></a></li>
+                    <li class="nav-item"><a href="/guideline" class="nav-link">GUIDELINE</a></li>
+                    <li class="nav-item"><a href="/home" class="nav-link"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="ホームアイコン"></a></li>
                 </ul>
             </div>
+            @section('movie')
             <div class="main">
-                @section('movie')
                 <video src="{{ asset('/img/Particles.mp4') }}" autoplay muted playsinline loop></video>
-                @show
             </div>
+            @show
         </div>
-        @yield('body')
+        <div class="size">
+            @yield('body')
+        </div>
         <div class="footer">
             <p>&copy; Name All rights reserved</p>
             <div class="nav-box">
                 <ul class="nav">
-                    <li class="nav-item"><a href="#" class="nav-link">NEWS</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">PROFILE</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">SCHEDULE</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">GUIDELINE</a></li>
+                    <li class="nav-item"><a href="/news" class="nav-link">NEWS</a></li>
+                    <li class="nav-item"><a href="/profile" class="nav-link">PROFILE</a></li>
+                    <li class="nav-item"><a href="/schedule" class="nav-link">SCHEDULE</a></li>
+                    <li class="nav-item"><a href="/guideline" class="nav-link">GUIDELINE</a></li>
                 </ul>
                 <ul class="nav icon-zone">
                     <li class="nav-item"><a href="#" class="icon nav-link"><img src="{{ asset('/img/youtube.svg') }}" alt="YouTubeのアイコン"></a></li>

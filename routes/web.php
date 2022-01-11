@@ -18,3 +18,31 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('homepages.index');
 });
+
+Route::get('/news', function () {
+    return view('homepages.news');
+});
+
+Route::get('/news/article', function () {
+    return view('homepages.news_article');
+});
+
+Route::get('/profile', function () {
+    return view('homepages.profile');
+});
+
+Route::get('/schedule', function () {
+    return view('homepages.schedule');
+});
+
+Route::get('/guideline', function () {
+    return view('homepages.guideline');
+});
+
+Route::get('/signin', function () {
+    return view('admins.signin');
+});
+
+Route::get('/admin', function () {
+    return view('admins.admin_home');
+});

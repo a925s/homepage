@@ -2,15 +2,17 @@
 
 @section('title', 'NAME')
 
-{{-- @section('movie') 
-<video src="{{ asset('/img/Forest.mp4') }}" autoplay muted playsinline></video>
-@endsection --}}
+@section('movie') 
+<div class="forest">
+    <video src="{{ asset('/img/Forest.mp4') }}" autoplay muted playsinline></video>
+</div>
+@endsection
 
 @section('body')
 <div class="news row">
     <div class="news-header-box">
         <div class="news-header">
-            <h1>NEWS</h1>
+            <h1><span>NE</span>WS</h1>
             <p>新着情報</p>
         </div>
         <div class="news-header-btn">
@@ -32,38 +34,80 @@
 </div>
 <div class="profile row">
     <div class="profile-header">
-            <h1>PROFILE</h1>
+            <h1><span>PRO</span>FILE</h1>
             <p>グループ・自己紹介</p>
     </div>
     <div class="group-profile">
-        <p>グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介</p>
+        <p>グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介</p>
     </div>
     <div class="members-profile">
-        <div class="member-profile">
-            <div class="member-photo">
-                <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
-            </div>
-            <div class="member-text">
-                <h2>NAME</h2>
-                <p>ニックネーム</p>
-                <button onclick="location.href='#'">▶</button>
-            </div>
-        </div>
-        <div class="member-profile">
-            <div class="member-photo">
-                <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
-            </div>
-            <div class="member-text">
-                <h2>NAME</h2>
-                <p>ニックネーム</p>
-                <button onclick="location.href='#'">▶</button>
-            </div>
-        </div>
+        <ul>
+            <li class="member-profile">
+                <div class="member-profile-box">
+                    <div class="member-photo">
+                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
+                    </div>
+                    <div class="member-text">
+                        <h2>NAME</h2>
+                        <p>ニックネーム</p>
+                        <button onclick="location.href='#'">▶</button>
+                    </div>
+                </div>
+            </li> 
+            <li class="member-profile">
+                <div class="member-profile-box">
+                    <div class="member-photo">
+                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
+                    </div>
+                    <div class="member-text">
+                        <h2>NAME</h2>
+                        <p>ニックネーム</p>
+                        <button onclick="location.href='#'">▶</button>
+                    </div>
+                </div>
+            </li>             
+            <li class="member-profile">
+                <div class="member-profile-box">
+                    <div class="member-photo">
+                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
+                    </div>
+                    <div class="member-text">
+                        <h2>NAME</h2>
+                        <p>ニックネーム</p>
+                        <button onclick="location.href='#'">▶</button>
+                    </div>
+                </div>
+            </li>             
+            <li class="member-profile">
+                <div class="member-profile-box">
+                    <div class="member-photo">
+                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
+                    </div>
+                    <div class="member-text">
+                        <h2>NAME</h2>
+                        <p>ニックネーム</p>
+                        <button onclick="location.href='#'">▶</button>
+                    </div>
+                </div>
+            </li>             
+            <li class="member-profile">
+                <div class="member-profile-box">
+                    <div class="member-photo">
+                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
+                    </div>
+                    <div class="member-text">
+                        <h2>NAME</h2>
+                        <p>ニックネーム</p>
+                        <button onclick="location.href='#'">▶</button>
+                    </div>
+                </div>
+            </li> 
+        </ul>
     </div>
 </div>
 <div class="schedule row">
     <div class="schedule-header">
-        <h1>SCHEDULE</h1>
+        <h1><span>SCHE</span>DULE</h1>
         <p>スケジュール</p>
     </div>
     <div class="schedules-box">
