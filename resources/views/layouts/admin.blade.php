@@ -12,16 +12,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>@yield('title')</title>
 </head>
-@section('body_name')
 <body class="admin">
-@show
     <div class="container-fluid">
         <div class="home row">
             <div class="header">
                 <ul class="nav">
-                    <li class="nav-item"><a href="/news" class="nav-link">NEWS</a></li>
-                    <li class="nav-item"><a href="/profile" class="nav-link">PROFILE</a></li>
-                    <li class="nav-item"><a href="/schedule" class="nav-link">SCHEDULE</a></li>
+                    <li class="nav-item"><a href="/admin/news" class="nav-link">NEWS</a></li>
+                    <li class="nav-item"><a href="/admin/profile" class="nav-link">PROFILE</a></li>
+                    <li class="nav-item"><a href="/admin/schedule" class="nav-link">SCHEDULE</a></li>
                 </ul>
             </div>
             <div class="main">
