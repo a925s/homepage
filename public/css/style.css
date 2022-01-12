@@ -736,20 +736,21 @@ schedule_main
 .schedule_main .schedule .schedule-main-box .schedules-box .schedule-box {
     margin: 10px 0 20px;
 }
-
-.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day {
+.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day-box{
+    border-bottom: 1px solid #ddd;
+}
+.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day-box .schedule-day {
     background-color: #000000;
     width: 100px;
     text-align: center;
 }
 
-.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day p {
+.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day-box .schedule-day p {
     color: #ffffff;
     margin-bottom: 0;
 }
 
 .schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-text {
-    border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     position: relative;
     display: flex;

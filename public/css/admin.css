@@ -137,7 +137,40 @@ signin
     margin-top: 20px;
 }
 
+/**
+news
+****/
+.form-news .articles-box {
+    border-top: 1px solid #ddd;
+    padding: 0;
+}
 
+.form-news .articles-box .article-box {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.form-news .articles-box .article-box p {
+    height: 0.5rem;
+}
+.form-news .articles-box .article-box p.text{
+    width: 65%;
+}
+.form-news .articles-box .article-box p.date {
+    font-weight: bold;
+    width: 15%;
+}
+
+.form-news .articles-box .article-box .button-box {
+    display: flex;
+    width: 20%;
+}
+.form-news .articles-box .article-box .button-box button{
+    margin: 0 5px;
+}
 /**
 schedule
 ****/
@@ -152,7 +185,70 @@ schedule
 .size .checkbox .form-checkbox{
     margin-right: 30px;
 }
+.form-schedule .schedules-box{
+    margin-bottom: 200px;
+}
+.form-schedule .schedules-box .schedule-box {
+    margin-bottom: 20px;
+}
 
+.form-schedule .schedules-box .schedule-box .schedule-day-box{
+    border-bottom: 1px solid #ddd;
+}
+
+.form-schedule .schedules-box .schedule-box .schedule-day {
+    background-color: #000000;
+    width: 100px;
+    text-align: center;
+}
+
+.form-schedule .schedules-box .schedule-box .schedule-day p {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.form-schedule .schedules-box .schedule-box .schedule-text {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+}
+
+.form-schedule .schedules-box .schedule-box .schedule-text-box{
+    width: 30%;
+}
+
+.form-schedule .schedules-box .schedule-box .schedule-text .schedule-text-box h3 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.form-schedule .schedules-box .schedule-box .schedule-text .schedule-text-box p.start-day {
+    font-size: 14px;
+}
+
+.form-schedule .schedules-box .schedule-box .schedule-text .profile-icon-box {
+    display: flex;
+    margin-left: 30px;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.form-schedule .schedules-box .schedule-box .schedule-text .profile-icon-box .profile-icon {
+    width: 50px;
+    margin: 20px 10px;
+}
+
+.form-schedule .schedules-box .schedule-box .schedule-text .profile-icon-box .profile-icon img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+.form-schedule .schedules-box .schedule-box .schedule-text .button-box {
+    display: flex;
+    width: 20%;
+}
+.form-schedule .schedules-box .schedule-box .schedule-text .button-box button{
+    margin: 30px 5px;
+}
 /**
 profile
 ****/

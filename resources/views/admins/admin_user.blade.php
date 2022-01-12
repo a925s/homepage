@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'REGISTER')
+@section('title', 'USER')
 
 @section('body')
 <div class="form-user">
