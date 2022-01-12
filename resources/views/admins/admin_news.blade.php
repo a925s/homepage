@@ -16,30 +16,30 @@
         </form>
     </div>
     <div class="articles-box">
-            <div class="article-box">
-                <p class="date">2020-01-04</p>
-                <p class="text">チャンネル登録者数10万人記念配信決定！</p>
-                <div class="button-box">
-                    <form action="#" method="post">
-                        <button class="button-green btn btn-success btn-sm" type="submit">修正</button>
-                    </form>
-                    <form action="#" method="post">
-                        <button class="button-green btn btn-success btn-sm" type="submit">削除</button>
-                    </form>
-                </div>
-            </div>
-            <div class="article-box">
-                <p class="date">2020-01-04</p>
-                <p class="text">チャンネル登録者数10万人記念配信決定！</p>
-                <div class="button-box">
-                    <form action="#" method="post">
-                        <button class="button-green btn btn-success btn-sm" type="submit">修正</button>
-                    </form>
-                    <form action="#" method="post">
-                        <button class="button-green btn btn-success btn-sm" type="submit">削除</button>
-                    </form>
-                </div>
+        <div class="article-box">
+            <p class="date">2020-01-04</p>
+            <p class="text">チャンネル登録者数10万人記念配信決定！</p>
+            <div class="button-box">
+                <form action="#" method="post">
+                    <button class="button-green btn btn-success btn-sm" type="submit">修正</button>
+                </form>
+                <form action="#" method="post">
+                    <button class="button-green btn btn-success btn-sm" type="submit">削除</button>
+                </form>
             </div>
         </div>
+        <div class="article-box">
+            <p class="date">2020-01-04</p>
+            <p class="text">チャンネル登録者数10万人記念配信決定！</p>
+            <div class="button-box">
+                <form action="#" method="post">
+                    <button class="button-green btn btn-success btn-sm" type="submit">修正</button>
+                </form>
+                <form action="#" method="post">
+                    <button class="button-green btn btn-success btn-sm" type="submit">削除</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

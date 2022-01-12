@@ -20,6 +20,7 @@
                     <li class="nav-item"><a href="/admin/news" class="nav-link">NEWS</a></li>
                     <li class="nav-item"><a href="/admin/profile" class="nav-link">PROFILE</a></li>
                     <li class="nav-item"><a href="/admin/schedule" class="nav-link">SCHEDULE</a></li>
+                    <li class="nav-item"><a href="/admin/guideline" class="nav-link">GUIDELINE</a></li>
                 </ul>
             </div>
             <div class="main">

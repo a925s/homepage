@@ -67,3 +67,6 @@ Route::get('/admin/profile/register', function () {
     return view('admins.admin_user_register');
 });
 
+Route::get('/admin/guideline', function () {
+    return view('admins.admin_guideline');
+});

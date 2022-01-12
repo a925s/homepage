@@ -16,7 +16,7 @@
             <p>新着情報</p>
         </div>
         <div class="news-header-btn">
-            <button onclick="location.href='#'">more</button>
+            <button onclick="location.href='/news'">more</button>
         </div>
     </div>
     <div class="articles-box">
