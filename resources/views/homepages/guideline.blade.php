@@ -13,9 +13,11 @@
             <h1><span>GUIDE</span>LINE</h1>
             <p>ガイドライン</p>
         </div>
+        @foreach($guidelines as $guideline)
         <div class="text-box">
-            <p>ガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドラインガイドライン</p>
+            <p>{{ $guideline->message }}</p>
         </div>
+        @endforeach
     </div>
 </div>
 @endsection

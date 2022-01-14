@@ -20,16 +20,13 @@
         </div>
     </div>
     <div class="articles-box">
+        @foreach($articles as $article)
         <div class="article-box">
-            <p class="date">2020-01-04</p>
-            <p>チャンネル登録者数10万人記念配信決定！</p>
-            <button onclick="location.href='#'">▶</button>
+            <p class="date">{{ $article->created_at->format('Y-m-d') }}</p>
+            <p>{{ $article->title }}</p>
+            <button onclick="location.href='/news/article/{{ $article->id }}'">▶</button>
         </div>
-        <div class="article-box">
-            <p class="date">2020-01-04</p>
-            <p>チャンネル登録者数10万人記念配信決定！</p>
-            <button onclick="location.href='#'">▶</button>
-        </div>
+        @endforeach
     </div>
 </div>
 <div class="profile row">
@@ -38,7 +35,9 @@
             <p>グループ・自己紹介</p>
     </div>
     <div class="group-profile">
-        <p>グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介グループの自己紹介</p>
+    @foreach($groups as $group)
+        <p>{{ $group->message }}</p>
+    @endforeach
     </div>
     <div class="members-profile">
         <ul>
@@ -106,47 +105,68 @@
     </div>
 </div>
 <div class="schedule row">
-    <div class="schedule-header">
-        <h1><span>SCHE</span>DULE</h1>
-        <p>スケジュール</p>
-    </div>
-    <div class="schedules-box">
-        <div class="schedule-box">
-            <div class="schedule-day">
-                <p>2022-01-02</p>
-            </div>
-            <div class="schedule-text">
-                <div class="schedule-text-box">
-                    <p class="light-box">LIVE</p>
-                    <h3>マイクラ配信</h3>
-                    <p class="start-day">2022-01-02 14:00</p>
-                </div>
-                <div class="profile-icon-box">
-                    <div class="profile-icon">
-                        <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
-                    </div>
-                    <div class="profile-icon">
-                        <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
-                    </div>
-                </div>
-            </div>
+    <div class="schedule-main-box">
+        <div class="schedule-header">
+            <h1><span>SCHE</span>DULE</h1>
+            <p>スケジュール</p>
         </div>
-        <div class="schedule-box">
-            <div class="schedule-day">
-                <p>2022-01-02</p>
-            </div>
-            <div class="schedule-text">
-                <div class="schedule-text-box">
-                    <p class="light-box">LIVE</p>
-                    <h3>マイクラ配信</h3>
-                    <p class="start-day">2022-01-02 14:00</p>
-                </div>
-                <div class="profile-icon-box">
-                    <div class="profile-icon">
-                        <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
+        <div class="schedules-box">
+            <div class="schedule-box">
+                <div class="schedule-day-box">
+                    <div class="schedule-day">
+                        <p>2022-01-02</p>
                     </div>
-                    <div class="profile-icon">
-                        <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
+                </div>
+                <div class="schedule-text">
+                    <div class="schedule-text-box">
+                        <p class="light-box">LIVE</p>
+                        <h3>マイクラ配信</h3>
+                        <p class="start-day">2022-01-02 14:00</p>
+                    </div>
+                    <div class="profile-icon-box">
+                        <div class="profile-icon">
+                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
+                        </div>
+                        <div class="profile-icon">
+                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule-text">
+                    <div class="schedule-text-box">
+                        <p class="light-box">LIVE</p>
+                        <h3>マイクラ配信</h3>
+                        <p class="start-day">2022-01-02 14:00</p>
+                    </div>
+                    <div class="profile-icon-box">
+                        <div class="profile-icon">
+                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
+                        </div>
+                        <div class="profile-icon">
+                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-box">
+                <div class="schedule-day-box">
+                    <div class="schedule-day">
+                        <p>2022-01-02</p>
+                    </div>
+                </div>
+                <div class="schedule-text">
+                    <div class="schedule-text-box">
+                        <p class="light-box">LIVE</p>
+                        <h3>マイクラ配信</h3>
+                        <p class="start-day">2022-01-02 14:00</p>
+                    </div>
+                    <div class="profile-icon-box">
+                        <div class="profile-icon">
+                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
+                        </div>
+                        <div class="profile-icon">
+                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
+                        </div>
                     </div>
                 </div>
             </div>

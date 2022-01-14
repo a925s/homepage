@@ -15,17 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('homepages.index');
-});
+Route::get('/home', 'HomeController@getHome');
 
-Route::get('/news', function () {
-    return view('homepages.news');
-});
+Route::get('/news', 'ArticleController@getNews');
 
-Route::get('/news/article', function () {
-    return view('homepages.news_article');
-});
+Route::get('/news/article/{id}', 'ArticleController@getNewsArticle');
 
 Route::get('/profile', function () {
     return view('homepages.profile');
@@ -35,9 +29,7 @@ Route::get('/schedule', function () {
     return view('homepages.schedule');
 });
 
-Route::get('/guideline', function () {
-    return view('homepages.guideline');
-});
+Route::get('/guideline', 'GuidelineController@getGuideline');
 
 Route::get('/signin', function () {
     return view('admins.signin');
@@ -47,9 +39,9 @@ Route::get('/admin', function () {
     return view('admins.admin_home');
 });
 
-Route::get('/admin/news', function () {
-    return view('admins.admin_news');
-});
+Route::get('/admin/news', 'ArticleController@getAdminNews');
+
+Route::get('/admin/news/article/{id}', 'ArticleController@getEditNewsArticle');
 
 Route::get('/admin/schedule', function () {
     return view('admins.admin_schedule');
@@ -67,6 +59,4 @@ Route::get('/admin/profile/register', function () {
     return view('admins.admin_user_register');
 });
 
-Route::get('/admin/guideline', function () {
-    return view('admins.admin_guideline');
-});
+Route::get('/admin/guideline', 'GuidelineController@getAdminGuideline');

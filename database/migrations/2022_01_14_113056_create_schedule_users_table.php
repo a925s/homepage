@@ -14,8 +14,8 @@ class CreateScheduleUsersTable extends Migration
     public function up()
     {
         Schema::create('schedule_users', function (Blueprint $table) {
-            $table->integer('schedule_id');
-            $table->integer('user_id');
+            $table->integer('schedule_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->primary(['schedule_id', 'user_id']);
         });
     }

@@ -14,16 +14,13 @@
             <p>新着情報</p>
         </div>
         <div class="articles-box">
+            @foreach($articles as $article)
             <div class="article-box">
-                <p class="date">2020-01-04</p>
-                <p>チャンネル登録者数10万人記念配信決定！</p>
-                <button onclick="location.href='#'">▶</button>
+                <p class="date">{{ $article->created_at->format('Y-m-d') }}</p>
+                <p>{{ $article->title }}</p>
+                <button onclick="location.href='/news/article/{{ $article->id }}'">▶</button>
             </div>
-            <div class="article-box">
-                <p class="date">2020-01-04</p>
-                <p>チャンネル登録者数10万人記念配信決定！</p>
-                <button onclick="location.href='#'">▶</button>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

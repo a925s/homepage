@@ -9,8 +9,10 @@
         <form action="/admin/guideline" method="post">
             @csrf
             <label for="guideline-text">ガイドライン本文</label>
-            <textarea class="textarea form-control" name="body" id="guideline-text" required></textarea>
-            <button class="button btn btn-success btn-sm" type="submit">投稿</button>
+            @foreach($guidelines as $guideline)
+            <textarea class="textarea form-control" name="body" id="guideline-text" required>{{ $guideline->message }}</textarea>
+            @endforeach
+            <button class="button btn btn-success btn-sm" type="submit">編集</button>
         </form>
     </div>
 </div>

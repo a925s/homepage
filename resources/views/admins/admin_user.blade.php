@@ -70,6 +70,9 @@
                 <button class="button btn btn-success btn-sm" type="submit">追加</button>
             </form>
         </div>
+        <form action="/admin/profile/user/delete" method="post">
+            <button class="button btn btn-success btn-sm" type="submit">ユーザー削除</button>
+        </form>
     </div>
 </div>
 @endsection
