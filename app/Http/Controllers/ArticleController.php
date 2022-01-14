@@ -55,6 +55,22 @@ class ArticleController extends Controller
     }
 
     /**
+     *  ARTICLE追加
+     * 
+     *  @param Request $request
+     *  @return Response
+     */
+    public function createArticle(Request $request)
+    {
+        $this->validate($request, Article::$rules);
+        $article = new Article;
+        $article->title = $request->title;
+        $article->message = $request->message;
+        $article->save();
+        return redirect('/admin/news');
+    }
+
+    /**
      *  ADMIN_EDIT_ARTICLE表示
      * 
      *  @param Request $request
@@ -66,9 +82,26 @@ class ArticleController extends Controller
         $title = $article->title;
         $message = $article->message;
         return view('admins.admin_news_edit', [
+            'id' => $id,
             'title' => $title,
             'message' => $message,
         ]);
+    }
+
+    /**
+     *  ARTICLE編集
+     * 
+     *  @param Request $request
+     *  @return Response
+     */
+    public function updateArticle(Request $request)
+    {
+        $this->validate($request, Article::$rules);
+        $article = Article::find($request->id);
+        $article->title = $request->title;
+        $article->message = $request->message;
+        $article->save();
+        return redirect('/admin/news');
     }
 }
 

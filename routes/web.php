@@ -41,7 +41,11 @@ Route::get('/admin', function () {
 
 Route::get('/admin/news', 'ArticleController@getAdminNews');
 
+Route::post('/admin/news', 'ArticleController@createArticle');
+
 Route::get('/admin/news/article/{id}', 'ArticleController@getEditNewsArticle');
+
+Route::post('/admin/news/article/{id}', 'ArticleController@updateArticle');
 
 Route::get('/admin/schedule', function () {
     return view('admins.admin_schedule');

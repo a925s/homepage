@@ -9,9 +9,14 @@
         <form action="/admin/news" method="post">
             @csrf
             <label for="news-title">タイトル</label>
-            <input type="text" class="form-control" name="news-title" id="news-title" required autofocus>
+            <input type="text" class="form-control" name="title" id="news-title" required autofocus>
+            <!-- バリデーションエラーの表示 -->
+            @include('common.errors')
+
             <label for="news-text">内容</label>
-            <textarea class="textarea form-control" name="body" id="news-text" required></textarea>
+            <textarea class="textarea form-control" name="message" id="news-text" required></textarea>
+            <!-- バリデーションエラーの表示 -->
+            @include('common.errors')
             <button class="button btn btn-success btn-sm" type="submit">投稿</button>
         </form>
     </div>
