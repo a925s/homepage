@@ -103,5 +103,17 @@ class ArticleController extends Controller
         $article->save();
         return redirect('/admin/news');
     }
+
+    /**
+     *  ARTICLE削除
+     * 
+     *  @param Request $request
+     *  @return Response
+     */
+    public function deleteArticle(Request $request)
+    {
+        Article::find($request->id)->delete();
+        return redirect('/admin/news');
+    }
 }
 

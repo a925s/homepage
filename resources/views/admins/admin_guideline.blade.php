@@ -10,7 +10,7 @@
             @csrf
             <label for="guideline-text">ガイドライン本文</label>
             @foreach($guidelines as $guideline)
-            <textarea class="textarea form-control" name="body" id="guideline-text" required>{{ $guideline->message }}</textarea>
+            <textarea class="textarea form-control" name="message" id="guideline-text" required>{{ $guideline->message }}</textarea>
             @endforeach
             <button class="button btn btn-success btn-sm" type="submit">編集</button>
         </form>

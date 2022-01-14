@@ -34,4 +34,19 @@ class GuidelineController extends Controller
             'guidelines' => $guidelines,
         ]);
     }
+
+    /**
+     *  GUIDELINE編集
+     * 
+     *  @param Request $request
+     *  @return Response
+     */
+    public function updateGuideline(Request $request)
+    {
+        $this->validate($request, Guideline::$rules);
+        $guideline = Guideline::find(1);
+        $guideline->message = $request->message;
+        $guideline->save();
+        return redirect('/admin/guideline');
+    }
 }

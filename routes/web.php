@@ -43,6 +43,8 @@ Route::get('/admin/news', 'ArticleController@getAdminNews');
 
 Route::post('/admin/news', 'ArticleController@createArticle');
 
+Route::post('/admin/news/delete', 'ArticleController@deleteArticle');
+
 Route::get('/admin/news/article/{id}', 'ArticleController@getEditNewsArticle');
 
 Route::post('/admin/news/article/{id}', 'ArticleController@updateArticle');
@@ -51,9 +53,9 @@ Route::get('/admin/schedule', function () {
     return view('admins.admin_schedule');
 });
 
-Route::get('/admin/profile', function () {
-    return view('admins.admin_profile');
-});
+Route::get('/admin/profile', 'ProfileController@getAdminProfile');
+
+Route::post('/admin/profile', 'ProfileController@updateGroupProfile');
 
 Route::get('/admin/profile/user', function () {
     return view('admins.admin_user');
@@ -64,3 +66,5 @@ Route::get('/admin/profile/register', function () {
 });
 
 Route::get('/admin/guideline', 'GuidelineController@getAdminGuideline');
+
+Route::post('/admin/guideline', 'GuidelineController@updateGuideline');

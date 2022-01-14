@@ -27,7 +27,9 @@
             <p class="text">{{ $article->title }}</p>
             <div class="button-box">
                 <button class="button-green btn btn-success btn-sm" onclick="location.href='/admin/news/article/{{ $article->id }}'">修正</button>
-                <form action="#" method="post">
+                <form action="/admin/news/delete" method="post">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $article->id }}">
                     <button class="button-green btn btn-success btn-sm" type="submit">削除</button>
                 </form>
             </div>
