@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('catchcopy');
             $table->text('message');
             $table->string('image_name');
+            $table->string('image_path');
             $table->timestamps();
         });
     }

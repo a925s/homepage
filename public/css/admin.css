@@ -19,7 +19,7 @@ h1 {
     margin: 100px 20% 200px 15%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .size {
         margin: 100px 10% 200px 10%;
     }
@@ -282,8 +282,12 @@ profile
     margin: 5px;
 }
 
+.members-profile .member-profile .member-photo{
+    width: 130px;
+}
+
 .members-profile .member-profile .member-photo img {
-   height:100%
+   width: 100%;
 }
 
 .members-profile .member-profile .member-text {

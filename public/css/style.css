@@ -19,7 +19,7 @@ h1 {
     margin: 100px 20% 200px 15%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .size {
         margin: 100px 10% 200px 10%;
     }
@@ -303,11 +303,10 @@ profile
     margin: 5px;
 }
 
-.app .profile .members-profile .member-profile .member-photo {
-}
+.app .profile .members-profile .member-profile .member-photo {width: 130px;}
 
 .app .profile .members-profile .member-profile .member-photo img {
-    height: 100%;
+    width: 100%;
 }
 
 .app .profile .members-profile .member-profile .member-text {
@@ -544,6 +543,94 @@ news_main_article
 }
 
 /**
+profile_home
+****/
+.profile_home .profile {
+    margin-bottom: 200px;
+}
+
+.profile_home .profile .profile-main-box{
+    display: flex;
+}
+
+.profile_home .profile .profile-main-box .profile-header{
+    width: 30%;
+}
+
+.profile_home .profile .profile-main-box .profile-box{
+    width: 70%;
+}
+
+.profile_home .profile .group-profile {
+    margin: 30px 0 40px;
+}
+
+
+.profile_home .profile .members-profile ul {
+    padding: 0;
+}
+
+.profile_home .profile .members-profile .member-profile {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 650px) {
+    .profile_home .profile .profile-main-box{
+        display:block;
+    }
+    .profile_home .profile .profile-main-box .profile-header{
+    width: 100%;
+    margin-bottom:70px;
+}
+
+.profile_home .profile .profile-main-box .profile-box{
+    width: 100%;
+}
+   
+}
+
+.profile_home .profile .members-profile .member-profile .member-profile-box {
+    border: 1px solid #ddd;
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 5px;
+}
+
+.profile_home .profile .members-profile .member-profile .member-photo {width: 130px;}
+
+.profile_home .profile .members-profile .member-profile .member-photo img {
+    width: 100%;
+}
+
+.profile_home .profile .members-profile .member-profile .member-text {
+    margin: 20px 20px;
+}
+
+.profile_home .profile .members-profile .member-profile .member-text h2 {
+    font-size: 22px;
+}
+
+.profile_home .profile .members-profile .member-profile .member-text p {
+    font-size: 15px;
+}
+
+.profile_home .profile .members-profile .member-profile .member-text button {
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 0 10px;
+    line-height: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/**
 profile_main
 ****/
 .profile_main .profile {
@@ -579,7 +666,7 @@ profile_main
 }
 
 .profile_main .profile .profile-detail-box .details-box .profile-detail-photo {
-    width: 30%;
+    width: 200px;
     margin-top: 7px;
 }
 
@@ -601,6 +688,7 @@ profile_main
         text-align: center;
         margin-bottom: 50px
     }
+    .profile_main .profile .profile-detail-box .details-box .profile-detail-photo{}
 
     .profile_main .profile .profile-detail-box .details-box .profile-detail-photo img {
         width: 50%;
@@ -687,9 +775,12 @@ profile_main
     width: 100%;
     margin: 5px;
 }
+.profile_main .profile .members-profile .member-profile .member-photo{
+    width: 130px;
+}
 
 .profile_main .profile .members-profile .member-profile .member-photo img {
-    height: 100%;
+    width: 100%;
 }
 
 .profile_main .profile .members-profile .member-profile .member-text {

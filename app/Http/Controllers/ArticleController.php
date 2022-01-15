@@ -15,7 +15,7 @@ class ArticleController extends Controller
      */
     public function getNews(Request $request)
     {
-        $articles = Article::orderBy('created_at', 'asc')->paginate(20);
+        $articles = Article::orderBy('created_at', 'desc')->paginate(20);
         return view('homepages.news', [
             'articles' => $articles,
         ]);
@@ -48,7 +48,7 @@ class ArticleController extends Controller
      */
     public function getAdminNews(Request $request)
     {
-        $articles = Article::orderBy('created_at', 'asc')->paginate(20);
+        $articles = Article::orderBy('created_at', 'desc')->paginate(20);
         return view('admins.admin_news', [
             'articles' => $articles,
         ]);

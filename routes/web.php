@@ -21,9 +21,9 @@ Route::get('/news', 'ArticleController@getNews');
 
 Route::get('/news/article/{id}', 'ArticleController@getNewsArticle');
 
-Route::get('/profile', function () {
-    return view('homepages.profile');
-});
+Route::get('/profile', 'ProfileController@getHomeProfile');
+
+Route::get('/profile/{id}', 'ProfileController@getUserProfile');
 
 Route::get('/schedule', function () {
     return view('homepages.schedule');
@@ -57,13 +57,17 @@ Route::get('/admin/profile', 'ProfileController@getAdminProfile');
 
 Route::post('/admin/profile', 'ProfileController@updateGroupProfile');
 
-Route::get('/admin/profile/user', function () {
-    return view('admins.admin_user');
-});
+Route::get('/admin/profile/user/{id}', 'UserController@getEditUser')->name('edit.user');
+
+Route::post('/admin/profile/user/{id}', 'UserController@updateUser');
+
+Route::post('/admin/profile/add/task', 'TaskController@createTask');
 
 Route::get('/admin/profile/register', function () {
     return view('admins.admin_user_register');
 });
+
+Route::post('/admin/profile/register', 'UserController@createUser');
 
 Route::get('/admin/guideline', 'GuidelineController@getAdminGuideline');
 

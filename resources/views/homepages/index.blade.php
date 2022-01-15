@@ -35,72 +35,26 @@
             <p>グループ・自己紹介</p>
     </div>
     <div class="group-profile">
-    @foreach($groups as $group)
+        @foreach($groups as $group)
         <p>{{ $group->message }}</p>
-    @endforeach
+        @endforeach
     </div>
     <div class="members-profile">
         <ul>
+            @foreach($users as $user)
             <li class="member-profile">
                 <div class="member-profile-box">
                     <div class="member-photo">
-                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
+                        <a href="/profile/{{ $user->id }}"><img src="{{ Storage::url($user->image_path) }}" alt="プロフィール画像"></a>
                     </div>
                     <div class="member-text">
-                        <h2>NAME</h2>
-                        <p>ニックネーム</p>
-                        <button onclick="location.href='#'">▶</button>
+                        <h2>{{  $user->name }}</h2>
+                        <p>{{ $user->catchcopy }}</p>
+                        <button onclick="location.href='/profile/{{ $user->id }}'">▶</button>
                     </div>
                 </div>
             </li> 
-            <li class="member-profile">
-                <div class="member-profile-box">
-                    <div class="member-photo">
-                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
-                    </div>
-                    <div class="member-text">
-                        <h2>NAME</h2>
-                        <p>ニックネーム</p>
-                        <button onclick="location.href='#'">▶</button>
-                    </div>
-                </div>
-            </li>             
-            <li class="member-profile">
-                <div class="member-profile-box">
-                    <div class="member-photo">
-                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
-                    </div>
-                    <div class="member-text">
-                        <h2>NAME</h2>
-                        <p>ニックネーム</p>
-                        <button onclick="location.href='#'">▶</button>
-                    </div>
-                </div>
-            </li>             
-            <li class="member-profile">
-                <div class="member-profile-box">
-                    <div class="member-photo">
-                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
-                    </div>
-                    <div class="member-text">
-                        <h2>NAME</h2>
-                        <p>ニックネーム</p>
-                        <button onclick="location.href='#'">▶</button>
-                    </div>
-                </div>
-            </li>             
-            <li class="member-profile">
-                <div class="member-profile-box">
-                    <div class="member-photo">
-                        <a href="#"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像"></a>
-                    </div>
-                    <div class="member-text">
-                        <h2>NAME</h2>
-                        <p>ニックネーム</p>
-                        <button onclick="location.href='#'">▶</button>
-                    </div>
-                </div>
-            </li> 
+            @endforeach
         </ul>
     </div>
 </div>
