@@ -43,10 +43,18 @@ class GuidelineController extends Controller
      */
     public function updateGuideline(Request $request)
     {
-        $this->validate($request, Guideline::$rules);
-        $guideline = Guideline::find(1);
-        $guideline->message = $request->message;
-        $guideline->save();
+        if(empty($guidelines)){
+            $this->validate($request, Guideline::$rules);
+            $guideline = new Guideline;
+            $guideline->message = $request->message;
+            $guideline->save();
+        }else{
+            $this->validate($request, Guideline::$rules);
+            $guideline = Guideline::find(1);
+            $guideline->message = $request->message;
+            $guideline->save();
+        }
+
         return redirect('/admin/guideline');
     }
 }

@@ -3,10 +3,97 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Schedule;
+use App\Task;
+use App\Schedule_User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    /**
+     *  USER_PROFILE表示
+     * 
+     *  @param Request $request
+     *  @return Response
+     */
+    public function getUserProfile(Request $request, $id)
+    {
+        $user = User::find($id);
+        $name = $user->name;
+        $catchcopy = $user->catchcopy;
+        $message = $user->message;
+        $image_name = $user->image_name;
+        $image_path = $user->image_path;
+
+        $users = User::where('id', '!=', $id)->orderBy('created_at', 'asc')->get();
+        $first = User::orderBy('created_at', 'asc')->first();
+        $first_id = $first->id;
+
+        $last = User::orderBy('created_at', 'desc')->first();
+        $last_id = $last->id;
+
+        if((int)$id !== $last_id){
+            $next = User::where('id', '>', $id)->orderBy('id','asc')->first();
+            $next_id = $next->id;
+        }
+
+        if((int)$id !== $last_id){
+            $next = User::where('id', '>', $id)->orderBy('id','asc')->first();
+            $next_id = $next->id;
+            return view('homepages.profile', [
+                'id' => $id,
+                'user' => $user,
+                'name' => $name,
+                'catchcopy' => $catchcopy,
+                'message' => $message,
+                'image_name' => $image_name,
+                'image_path' => $image_path,
+                'users' => $users,
+                'first_id' => $first_id,
+                'next_id' => $next_id,
+                'last_id' => $last_id
+            ]);
+        }else{
+            return view('homepages.profile', [
+                'id' => $id,
+                'user' => $user,
+                'name' => $name,
+                'catchcopy' => $catchcopy,
+                'message' => $message,
+                'image_name' => $image_name,
+                'image_path' => $image_path,
+                'users' => $users,
+                'first_id' => $first_id,
+                'last_id' => $last_id
+            ]);
+        }
+    }
+
+    /**
+     *  ADMIN_PROFILE_USER表示
+     * 
+     *  @param Request $request
+     *  @return Response
+     */
+    public function getEditUser(Request $request, $id)
+    {
+        $user = User::find($id);
+        $name = $user->name;
+        $catchcopy = $user->catchcopy;
+        $message = $user->message;
+        $image_name = $user->image_name;
+        $image_path = $user->image_path;
+        return view('admins.admin_user', [
+            'user' => $user,
+            'id' => $id,
+            'name' => $name,
+            'catchcopy' => $catchcopy,
+            'message' => $message,
+            'image_name' => $image_name,
+            'image_path' => $image_path,
+        ]);
+    }
+
     /**
      *  USER追加
      * 
@@ -35,31 +122,6 @@ class UserController extends Controller
         }
 
         return redirect('/admin/profile');
-    }
-
-    /**
-     *  ADMIN_PROFILE_USER表示
-     * 
-     *  @param Request $request
-     *  @return Response
-     */
-    public function getEditUser(Request $request, $id)
-    {
-        $user = User::find($id);
-        $name = $user->name;
-        $catchcopy = $user->catchcopy;
-        $message = $user->message;
-        $image_name = $user->image_name;
-        $image_path = $user->image_path;
-        return view('admins.admin_user', [
-            'user' => $user,
-            'id' => $id,
-            'name' => $name,
-            'catchcopy' => $catchcopy,
-            'message' => $message,
-            'image_name' => $image_name,
-            'image_path' => $image_path,
-        ]);
     }
 
     /**
@@ -102,9 +164,9 @@ class UserController extends Controller
      *  @param Request $request
      *  @return Response
      */
-    public function deleteArticle(Request $request)
+    public function deleteUser(Request $request)
     {
-        Article::find($request->id)->delete();
-        return redirect('/admin/news');
+        User::find($request->id)->delete();
+        return redirect('/admin/profile');
     }
 }

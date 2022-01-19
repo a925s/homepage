@@ -17,4 +17,9 @@ class Task extends Model
         'answer' => 'required',
         'user_id' => 'required'
     ];
+
+    public function tasks()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

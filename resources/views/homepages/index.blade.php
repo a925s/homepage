@@ -60,70 +60,48 @@
 </div>
 <div class="schedule row">
     <div class="schedule-main-box">
-        <div class="schedule-header">
-            <h1><span>SCHE</span>DULE</h1>
-            <p>スケジュール</p>
+        <div class="schedule-header-box">
+            <div class="schedule-header">
+                <h1><span>SCHE</span>DULE</h1>
+                <p>スケジュール</p>
+            </div>
+            <div class="schedule-header-btn">
+                <button onclick="location.href='/schedule'">more</button>
+            </div>
         </div>
         <div class="schedules-box">
+            @foreach($schedules as $schedule)
             <div class="schedule-box">
+                @if($schedule == $first)
                 <div class="schedule-day-box">
                     <div class="schedule-day">
-                        <p>2022-01-02</p>
+                        <p>{{ $schedule->start_date }}</p>
                     </div>
                 </div>
+                @elseif($schedule->start_date !== $schedules[$count-1]->start_date)
+                <div class="schedule-day-box">
+                    <div class="schedule-day">
+                        <p>{{ $schedule->start_date }}</p>
+                    </div>
+                </div>
+                @endif
                 <div class="schedule-text">
                     <div class="schedule-text-box">
                         <p class="light-box">LIVE</p>
-                        <h3>マイクラ配信</h3>
-                        <p class="start-day">2022-01-02 14:00</p>
+                        <h3>{{ $schedule->title }}</h3>
+                        <p class="start-day">{{ $schedule->start_date." ".$schedule->start_time }}</p>
                     </div>
                     <div class="profile-icon-box">
+                        @foreach($schedule->users as $user)
                         <div class="profile-icon">
-                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
+                            <img src="{{ Storage::url($user->image_path) }}" alt="プロフィール画像">
                         </div>
-                        <div class="profile-icon">
-                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
-                        </div>
-                    </div>
-                </div>
-                <div class="schedule-text">
-                    <div class="schedule-text-box">
-                        <p class="light-box">LIVE</p>
-                        <h3>マイクラ配信</h3>
-                        <p class="start-day">2022-01-02 14:00</p>
-                    </div>
-                    <div class="profile-icon-box">
-                        <div class="profile-icon">
-                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
-                        </div>
-                        <div class="profile-icon">
-                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-            <div class="schedule-box">
-                <div class="schedule-day-box">
-                    <div class="schedule-day">
-                        <p>2022-01-02</p>
-                    </div>
-                </div>
-                <div class="schedule-text">
-                    <div class="schedule-text-box">
-                        <p class="light-box">LIVE</p>
-                        <h3>マイクラ配信</h3>
-                        <p class="start-day">2022-01-02 14:00</p>
-                    </div>
-                    <div class="profile-icon-box">
-                        <div class="profile-icon">
-                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
-                        </div>
-                        <div class="profile-icon">
-                            <img src="{{ asset('/img/home_favicon.jpg') }}" alt="プロフィール画像">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php $count++; ?>
+            @endforeach
         </div>
     </div>
 </div>

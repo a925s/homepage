@@ -23,7 +23,11 @@
                         <p class="nickname">{{ $catchcopy }}</p>
                         <h2>{{ $name }}</h2>
                     </div>
-                    <button onclick="location.href='#'">▶</button>
+                    @if($id == $last_id)
+                    <button onclick="location.href='/profile/{{ $first_id }}'">▶</button>
+                    @else
+                    <button onclick="location.href='/profile/{{ $next_id }}'">▶</button>
+                    @endif
                 </div>
                 <p class="introduction">{{ $message }}</p>
                 @foreach($user->tasks as $task)

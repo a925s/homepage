@@ -21,8 +21,18 @@ class TaskController extends Controller
         $task->answer = $request->answer;
         $task->user_id = $request->user_id;
         $task->save();
-        return redirect(route('edit.user', [
-            'id' => $request->user_id,
-        ]));
+        return back();
+    }
+
+    /**
+     *  TASK削除
+     * 
+     *  @param Request $request
+     *  @return Response
+     */
+    public function deleteTask(Request $request)
+    {
+        Task::find($request->id)->delete();
+        return back();
     }
 }

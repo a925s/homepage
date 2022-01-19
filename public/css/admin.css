@@ -184,12 +184,16 @@ schedule
 }
 .size .checkbox .form-checkbox{
     margin-right: 30px;
+    width: 100px;
 }
+.size .checkbox .form-checkbox img{
+    width: 100%;
+}
+
 .form-schedule .schedules-box{
     margin-bottom: 200px;
 }
 .form-schedule .schedules-box .schedule-box {
-    margin-bottom: 20px;
 }
 
 .form-schedule .schedules-box .schedule-box .schedule-day-box{
@@ -204,7 +208,7 @@ schedule
 
 .form-schedule .schedules-box .schedule-box .schedule-day p {
     color: #ffffff;
-    margin-bottom: 0;
+    margin: 20px 0 0;
 }
 
 .form-schedule .schedules-box .schedule-box .schedule-text {

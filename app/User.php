@@ -25,4 +25,9 @@ class User extends Model
     {
         return $this->hasMany('App\Task');
     }
+
+    public function schedules()
+    {
+        return $this->belongsToMany('App\Schedule');
+    }
 }
