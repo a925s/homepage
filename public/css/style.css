@@ -272,7 +272,6 @@ profile
     margin: 30px 0 40px;
 }
 
-
 .app .profile .members-profile ul {
     display: flex;
     flex-wrap: wrap;
@@ -303,7 +302,9 @@ profile
     margin: 5px;
 }
 
-.app .profile .members-profile .member-profile .member-photo {width: 130px;}
+.app .profile .members-profile .member-profile .member-photo {
+    width: 130px;
+}
 
 .app .profile .members-profile .member-profile .member-photo img {
     width: 100%;
@@ -368,16 +369,16 @@ schedule
     .app .schedule .schedule-main-box {
         display: block;
     }
+
     .app .schedule .schedule-main-box .schedules-box {
         width: 100%;
     }
 }
 
-.app .schedule .schedule-main-box .schedules-box .schedule-box {
-}
-.app .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day-box{
+.app .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day-box {
     border-bottom: 1px solid #ddd;
 }
+
 .app .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day-box .schedule-day {
     background-color: #000000;
     width: 100px;
@@ -393,6 +394,13 @@ schedule
     border-bottom: 1px solid #ddd;
     position: relative;
     display: flex;
+}
+
+.app .schedule .schedule-main-box .schedules-box .schedule-box .schedule-text .schedule-text-box {
+    width: 25%;
+}
+
+.app .schedule .schedule-main-box .schedules-box .schedule-box .schedule-text .profile-icon-box {
 }
 
 .app .schedule .schedule-main-box .schedules-box .schedule-box .schedule-text p.light-box {
@@ -418,6 +426,7 @@ schedule
     display: flex;
     margin-left: 30px;
 }
+
 .app .schedule .schedule-main-box .schedules-box .schedule-box .schedule-text .profile-icon-box .profile-icon {
     width: 50px;
     margin: 20px 10px;
@@ -566,22 +575,21 @@ profile_home
     margin-bottom: 200px;
 }
 
-.profile_home .profile .profile-main-box{
+.profile_home .profile .profile-main-box {
     display: flex;
 }
 
-.profile_home .profile .profile-main-box .profile-header{
+.profile_home .profile .profile-main-box .profile-header {
     width: 30%;
 }
 
-.profile_home .profile .profile-main-box .profile-box{
+.profile_home .profile .profile-main-box .profile-box {
     width: 70%;
 }
 
 .profile_home .profile .group-profile {
     margin: 30px 0 40px;
 }
-
 
 .profile_home .profile .members-profile ul {
     padding: 0;
@@ -594,18 +602,18 @@ profile_home
 }
 
 @media screen and (max-width: 650px) {
-    .profile_home .profile .profile-main-box{
+    .profile_home .profile .profile-main-box {
         display:block;
     }
-    .profile_home .profile .profile-main-box .profile-header{
-    width: 100%;
-    margin-bottom:70px;
-}
 
-.profile_home .profile .profile-main-box .profile-box{
-    width: 100%;
-}
-   
+    .profile_home .profile .profile-main-box .profile-header {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .profile_home .profile .profile-main-box .profile-box {
+        width: 100%;
+    }
 }
 
 .profile_home .profile .members-profile .member-profile .member-profile-box {
@@ -616,7 +624,9 @@ profile_home
     margin: 5px;
 }
 
-.profile_home .profile .members-profile .member-profile .member-photo {width: 130px;}
+.profile_home .profile .members-profile .member-profile .member-photo {
+    width: 130px;
+}
 
 .profile_home .profile .members-profile .member-profile .member-photo img {
     width: 100%;
@@ -705,7 +715,9 @@ profile_main
         text-align: center;
         margin-bottom: 50px
     }
-    .profile_main .profile .profile-detail-box .details-box .profile-detail-photo{}
+
+    .profile_main .profile .profile-detail-box .details-box .profile-detail-photo {
+    }
 
     .profile_main .profile .profile-detail-box .details-box .profile-detail-photo img {
         width: 50%;
@@ -792,7 +804,8 @@ profile_main
     width: 100%;
     margin: 5px;
 }
-.profile_main .profile .members-profile .member-profile .member-photo{
+
+.profile_main .profile .members-profile .member-profile .member-photo {
     width: 130px;
 }
 
@@ -859,11 +872,10 @@ schedule_main
     }
 }
 
-.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box {
-}
-.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day-box{
+.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day-box {
     border-bottom: 1px solid #ddd;
 }
+
 .schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-day-box .schedule-day {
     background-color: #000000;
     width: 100px;
@@ -879,6 +891,13 @@ schedule_main
     border-bottom: 1px solid #ddd;
     position: relative;
     display: flex;
+}
+
+.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-text .schedule-text-box {
+    width: 25%;
+}
+
+.schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-text .profile-icon-box {
 }
 
 .schedule_main .schedule .schedule-main-box .schedules-box .schedule-box .schedule-text p.light-box {
@@ -926,22 +945,27 @@ schedule_main
 /**
 guideline
 ****/
-.guideline .guideline-box{
+.guideline .guideline-box {
     display: flex;
 }
-.guideline .guideline-box .guideline-header{
+
+.guideline .guideline-box .guideline-header {
     width: 30%;
 }
-.guideline .guideline-box .text-box{
+
+.guideline .guideline-box .text-box {
     width: 70%;
 }
+
 @media screen and (max-width: 1000px) {
-    .guideline .guideline-box{
-    display: block;
-}
-.guideline .guideline-box .guideline-header{
-    width: 100%;
-}
-.guideline .guideline-box .text-box{
-    width: 100%;
-}
+    .guideline .guideline-box {
+        display: block;
+    }
+
+    .guideline .guideline-box .guideline-header {
+        width: 100%;
+    }
+
+    .guideline .guideline-box .text-box {
+        width: 100%;
+    }

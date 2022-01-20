@@ -15,6 +15,13 @@
 <body class="signin text-center">
     <div class="container-fluid">
         <div class="form-signin">
+            @if ($errors->any())
+            @foreach ($errors->all() as $error)
+            <div class="error-message">
+                {{ $error }}
+            </div>
+            @endforeach
+            @endif
             <form action="/signin" method="post">
                 @csrf
                 <h1>管理者ページ</h1>

@@ -106,31 +106,49 @@ h1 {
     }
 }
 
-label{
+label {
     font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
 }
-.button{
+
+.button {
     margin: 70px 0 200px;
 }
 
-.textarea{
+.textarea {
     height: 300px;
 }
 
 /**
 signin
 ****/
-.signin{background-color: #123;}
-.signin .form-signin{
+.signin {
+    background-color: #123;
+}
+
+.signin .form-signin {
     width: 100%;
     max-width: 330px;
     margin: 100px auto;
 }
-.signin .form-signin h1{color: #ffffff;margin-bottom: 50px;}
-.signin .form-signin input{background-color: #123;color: #ffffff;}
-.signin .form-signin button{
+
+.signin .form-signin .error-message {
+    color: #48b39d;
+    margin-bottom: 20px;
+}
+
+.signin .form-signin h1 {
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.signin .form-signin input {
+    background-color: #123;
+    color: #ffffff;
+}
+
+.signin .form-signin button {
     background-color: #48b39d;
     width: 100%;
     color: #ffffff;
@@ -156,9 +174,11 @@ news
 .form-news .articles-box .article-box p {
     height: 0.5rem;
 }
-.form-news .articles-box .article-box p.text{
+
+.form-news .articles-box .article-box p.text {
     width: 65%;
 }
+
 .form-news .articles-box .article-box p.date {
     font-weight: bold;
     width: 15%;
@@ -168,35 +188,41 @@ news
     display: flex;
     width: 20%;
 }
-.form-news .articles-box .article-box .button-box button{
+
+.form-news .articles-box .article-box .button-box button {
     margin: 0 5px;
 }
+
 /**
 schedule
 ****/
-.size h2{
+.size h2 {
     margin-top: 20px;
     font-size: 18px;
 }
-.size .checkbox{
+
+.size .checkbox {
     display: flex;
     flex-wrap: wrap;
 }
-.size .checkbox .form-checkbox{
+
+.size .checkbox .form-checkbox {
     margin-right: 30px;
     width: 100px;
 }
-.size .checkbox .form-checkbox img{
+
+.size .checkbox .form-checkbox img {
     width: 100%;
 }
 
-.form-schedule .schedules-box{
+.form-schedule .schedules-box {
     margin-bottom: 200px;
 }
+
 .form-schedule .schedules-box .schedule-box {
 }
 
-.form-schedule .schedules-box .schedule-box .schedule-day-box{
+.form-schedule .schedules-box .schedule-box .schedule-day-box {
     border-bottom: 1px solid #ddd;
 }
 
@@ -216,7 +242,7 @@ schedule
     display: flex;
 }
 
-.form-schedule .schedules-box .schedule-box .schedule-text-box{
+.form-schedule .schedules-box .schedule-box .schedule-text-box {
     width: 30%;
 }
 
@@ -246,13 +272,16 @@ schedule
     border-radius: 50%;
     border: 1px solid #ddd;
 }
+
 .form-schedule .schedules-box .schedule-box .schedule-text .button-box {
     display: flex;
     width: 20%;
 }
-.form-schedule .schedules-box .schedule-box .schedule-text .button-box button{
+
+.form-schedule .schedules-box .schedule-box .schedule-text .button-box button {
     margin: 30px 5px;
 }
+
 /**
 profile
 ****/
@@ -286,12 +315,12 @@ profile
     margin: 5px;
 }
 
-.members-profile .member-profile .member-photo{
+.members-profile .member-profile .member-photo {
     width: 130px;
 }
 
 .members-profile .member-profile .member-photo img {
-   width: 100%;
+    width: 100%;
 }
 
 .members-profile .member-profile .member-text {
@@ -315,19 +344,24 @@ profile
     right: 0;
 }
 
-
 /**
 profile_user
 ****/
-.profile-task .task-box{
+.profile-task .task-box {
     margin-bottom: 50px;
 }
+
 .profile-task .task-box .favorite {
     display: flex;
     margin-bottom: 5px;
 }
-.profile-task .task-box .favorite .favorite-q-box{width: 30%;max-width: 200px;}
-.profile-task .task-box .favorite .favorite-q-box .favorite-q{
+
+.profile-task .task-box .favorite .favorite-q-box {
+    width: 30%;
+    max-width: 200px;
+}
+
+.profile-task .task-box .favorite .favorite-q-box .favorite-q {
     margin-right: 20px;
     background-color: #000000;
     color: #ffffff;
@@ -335,9 +369,11 @@ profile_user
     height: 100%;
     line-height: 1.8;
 }
-.profile-task .task-box .favorite .favorite-a-box{
+
+.profile-task .task-box .favorite .favorite-a-box {
     width: 60%;
     max-width: 500px;
 }
 
-.profile-task .task-box .favorite .button-green{}
+.profile-task .task-box .favorite .button-green {
+}

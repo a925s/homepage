@@ -17,6 +17,7 @@
         <div class="home row">
             <div class="header">
                 <ul class="nav">
+                    <li class="nav-item"><a href="/admin" class="nav-link">HOME</a></li>
                     <li class="nav-item"><a href="/admin/news" class="nav-link">NEWS</a></li>
                     <li class="nav-item"><a href="/admin/profile" class="nav-link">PROFILE</a></li>
                     <li class="nav-item"><a href="/admin/schedule" class="nav-link">SCHEDULE</a></li>
