@@ -8,8 +8,8 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{{ mix('js/home.js') }}"></script>
+    @yield('js')
     <title>@yield('title')</title>
 </head>
 @section('body_name')
@@ -18,14 +18,21 @@
     <div class="container-fluid">
         <div class="home row">
             <div class="header">
-                <ul class="nav">
-                    <li class="nav-item"><a href="/news" class="nav-link">NEWS</a></li>
-                    <li class="nav-item"><a href="/profile" class="nav-link">PROFILE</a></li>
-                    <li class="nav-item"><a href="/schedule" class="nav-link">SCHEDULE</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">OFFICIAL</a></li>
-                    <li class="nav-item"><a href="/guideline" class="nav-link">GUIDELINE</a></li>
-                    <li class="nav-item"><a href="/home" class="nav-link"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="ホームアイコン"></a></li>
-                </ul>
+                <p class="btn-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </p>
+                <nav class="gnav-box">
+                    <ul class="gnav nav">
+                        <li class="nav-item"><a href="/news" class="nav-link">NEWS</a></li>
+                        <li class="nav-item"><a href="/profile" class="nav-link">PROFILE</a></l▾i>
+                        <li class="nav-item"><a href="/schedule" class="nav-link">SCHEDULE</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">OFFICIAL</a></li>
+                        <li class="nav-item"><a href="/guideline" class="nav-link">GUIDELINE</a></li>
+                    </ul>
+                </nav>
+                <a href="/home/next" class="nav-link"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="ホームアイコン"></a>
             </div>
             @section('movie')
             <div class="main">

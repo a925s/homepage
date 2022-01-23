@@ -2,11 +2,6 @@
 
 @section('title', 'NAME')
 
-@section('js')
-<script src="{{ mix('js/loading.js') }}"></script>
-<script src="{{ mix('js/home.js') }}"></script>
-@endsection
-
 @section('movie') 
 <div class="forest">
     <video src="{{ asset('/img/Forest.mp4') }}" autoplay muted playsinline></video>
@@ -14,9 +9,6 @@
 @endsection
 
 @section('body')
-<div class="loading">
-    <div class="loading-5"></div>
-</div>
 <div class="news row">
     <div class="news-header-box">
         <div class="news-header">
