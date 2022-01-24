@@ -9,13 +9,9 @@
         <form action="/admin/guideline" method="post">
             @csrf
             <label for="guideline-text">ガイドライン本文</label>
-            @if($guidelines->isEmpty())
-            <textarea class="textarea form-control" name="message" id="guideline-text" required></textarea>
-            @else
             @foreach($guidelines as $guideline)
             <textarea class="textarea form-control" name="message" id="guideline-text" required>{{ $guideline->message }}</textarea>
             @endforeach
-            @endif
             <button class="button btn btn-success btn-sm" type="submit">編集</button>
         </form>
     </div>

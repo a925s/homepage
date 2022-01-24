@@ -48,18 +48,10 @@ class ProfileController extends Controller
      */
     public function updateGroupProfile(Request $request)
     {
-        if(empty($groups)){
-            $this->validate($request, Group::$rules);
-            $group = new Group;
-            $group->message = $request->message;
-            $group->save();
-
-        }else{
-            $this->validate($request, Group::$rules);
-            $group = Group::find(1);
-            $group->message = $request->message;
-            $group->save();
-        }
+        $this->validate($request, Group::$rules);
+        $group = Group::find(1);
+        $group->message = $request->message;
+        $group->save();
 
         return redirect('/admin/profile');
     }

@@ -7,13 +7,9 @@
     <form action="/admin/profile" method="post">
         @csrf
         <label for="news-text">グループ紹介文</label>
-        @if($groups->isEmpty())
-        <textarea class="textarea form-control" name="message" id="news-text" required></textarea>
-        @else
         @foreach($groups as $group)
         <textarea class="textarea form-control" name="message" id="news-text" required>{{ $group->message }}</textarea>
         @endforeach
-        @endif
         <button class="button btn btn-success btn-sm" type="submit">修正</button>
     </form>
 
