@@ -9,11 +9,11 @@
 @section('body')
 <div class="news row">
     <div class="news-box">
-        <div class="news-header">
+        <div class="news-header scrollanime slide-left">
             <h1><span>NE</span>WS</h1>
             <p>新着情報</p>
         </div>
-        <div class="articles-box">
+        <div class="articles-box scrollanime downup">
             @foreach($articles as $article)
             <div class="article-box">
                 <p class="date">{{ $article->created_at->format('Y-m-d') }}</p>

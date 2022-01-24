@@ -4,12 +4,22 @@
 
 @section('js')
 <script src="{{ mix('js/loading.js') }}"></script>
-<script src="{{ mix('js/home.js') }}"></script>
 @endsection
 
 @section('movie') 
 <div class="forest">
-    <video src="{{ asset('/img/Forest.mp4') }}" autoplay muted playsinline></video>
+    <video src="{{ asset('/img/Forest.mp4') }}" id="forest-video" autoplay muted playsinline></video>
+    <div class="video-message">
+        <p class="message1">好きを仕事に。</p>
+        <p class="message2">人生という「ゲーム」をもっと楽しく。</p>
+    </div>
+    <div class="div-image">
+        <img src="{{ asset('/img/next.jpg') }}" alt="ホーム画面">
+        <div class="img-message">
+            <p class="message3">好きを仕事に。</p>
+            <p class="message4">人生という「ゲーム」をもっと楽しく。</p>
+        </div>
+    </div>
 </div>
 @endsection
 
@@ -19,15 +29,15 @@
 </div>
 <div class="news row">
     <div class="news-header-box">
-        <div class="news-header">
+        <div class="news-header scrollanime slide-left">
             <h1><span>NE</span>WS</h1>
             <p>新着情報</p>
         </div>
-        <div class="news-header-btn">
+        <div class="news-header-btn scrollanime downup">
             <button onclick="location.href='/news'">more</button>
         </div>
     </div>
-    <div class="articles-box">
+    <div class="articles-box scrollanime downup">
         @foreach($articles as $article)
         <div class="article-box">
             <p class="date">{{ $article->created_at->format('Y-m-d') }}</p>
@@ -38,16 +48,16 @@
     </div>
 </div>
 <div class="profile row">
-    <div class="profile-header">
+    <div class="profile-header scrollanime slide-left">
             <h1><span>PRO</span>FILE</h1>
             <p>グループ・自己紹介</p>
     </div>
-    <div class="group-profile">
+    <div class="group-profile scrollanime downup">
         @foreach($groups as $group)
         <p>{{ $group->message }}</p>
         @endforeach
     </div>
-    <div class="members-profile">
+    <div class="members-profile scrollanime downup">
         <ul>
             @foreach($users as $user)
             <li class="member-profile">
@@ -69,15 +79,15 @@
 <div class="schedule row">
     <div class="schedule-main-box">
         <div class="schedule-header-box">
-            <div class="schedule-header">
+            <div class="schedule-header scrollanime slide-left">
                 <h1><span>SCHE</span>DULE</h1>
                 <p>スケジュール</p>
             </div>
-            <div class="schedule-header-btn">
+            <div class="schedule-header-btn scrollanime downup">
                 <button onclick="location.href='/schedule'">more</button>
             </div>
         </div>
-        <div class="schedules-box">
+        <div class="schedules-box scrollanime downup">
             @foreach($schedules as $schedule)
             <div class="schedule-box">
                 @if($schedule == $first)

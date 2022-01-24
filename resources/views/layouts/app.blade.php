@@ -23,16 +23,25 @@
                     <span></span>
                     <span></span>
                 </p>
-                <nav class="gnav-box">
+                <div class="gnav-box">
                     <ul class="gnav nav">
                         <li class="nav-item"><a href="/news" class="nav-link">NEWS</a></li>
                         <li class="nav-item"><a href="/profile" class="nav-link">PROFILE</a></l▾i>
                         <li class="nav-item"><a href="/schedule" class="nav-link">SCHEDULE</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">OFFICIAL</a></li>
+                        <li class="nav-item"><a href="#" class="official-btn nav-link">OFFICIAL</a></li>
                         <li class="nav-item"><a href="/guideline" class="nav-link">GUIDELINE</a></li>
                     </ul>
-                </nav>
-                <a href="/home/next" class="nav-link"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="ホームアイコン"></a>
+                    <div class="official-box">
+                        <ul class="official nav">
+                            <li class="nav-item"><a href="#" class="nav-link">YouTube</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Twitter</a></l▾i>
+                            <li class="nav-item"><a href="#" class="nav-link">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="home-icon">
+                    <a href="/home/next" class="nav-link"><img src="{{ asset('/img/home_favicon.jpg') }}" alt="ホームアイコン"></a>
+                </div>
             </div>
             @section('movie')
             <div class="main">
@@ -43,7 +52,7 @@
         <div class="size">
             @yield('body')
         </div>
-        <div class="footer">
+        <div class="footer scrollanime updown">
             <p>&copy; Name All rights reserved</p>
             <div class="nav-box">
                 <ul class="nav">

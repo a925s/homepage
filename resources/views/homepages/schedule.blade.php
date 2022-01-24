@@ -9,11 +9,11 @@
 @section('body')
 <div class="schedule row">
     <div class="schedule-main-box">
-        <div class="schedule-header">
+        <div class="schedule-header scrollanime slide-left">
             <h1><span>SCHE</span>DULE</h1>
             <p>スケジュール</p>
         </div>
-        <div class="schedules-box">
+        <div class="schedules-box scrollanime downup">
             @foreach($schedules as $schedule)
             <div class="schedule-box">
                 @if($schedule == $first)

@@ -9,16 +9,16 @@
 @section('body')
 <div class="profile row">
     <div class="profile-detail-box">
-        <div class="profile-header">
+        <div class="profile-header scrollanime slide-left">
                 <h1><span>PRO</span>FILE</h1>
                 <p>グループ・自己紹介</p>
         </div>
         <div class="details-box">
-            <div class="profile-detail-photo">
+            <div class="profile-detail-photo scrollanime downup">
                 <img src="{{ Storage::url($image_path) }}" alt="プロフィール画像">
             </div>
             <div class="profile-detail-text">
-                <div class="detail-box">
+                <div class="detail-box scrollanime downup">
                     <div class="profile-detail-name">
                         <p class="nickname">{{ $catchcopy }}</p>
                         <h2>{{ $name }}</h2>
@@ -29,9 +29,9 @@
                     <button onclick="location.href='/profile/{{ $next_id }}'">▶</button>
                     @endif
                 </div>
-                <p class="introduction">{{ $message }}</p>
+                <p class="introduction scrollanime downup">{{ $message }}</p>
                 @foreach($user->tasks as $task)
-                <div class="favorite">
+                <div class="favorite scrollanime downup">
                     <div class="favorite-q">{{ $task->question }}</div>
                     <div class="favorite-a">{{ $task->answer }}</div>
                 </div>
@@ -39,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="members-profile">
+    <div class="members-profile scrollanime downup">
         <ul>
             @foreach($users as $user)
             <li class="member-profile">
