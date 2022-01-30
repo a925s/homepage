@@ -70,50 +70,6 @@ class ScheduleController extends Controller
     }
 
     /**
-     *  EDIT_SCHEDULE表示
-     * 
-     *  @param Request $request
-     *  @return Response
-     */
-    public function getEditSchedule(Request $request, $id)
-    {
-        $schedule = Schedule::find($id);
-        $title = $schedule->title;
-        $start_date = $schedule->start_date;
-        $start_time = $schedule->start_time;
-        $users = User::orderBy('created_at', 'asc')->get();
-        return view('admins.admin_schedule_edit', [
-            'id' => $id,
-            'title' => $title,
-            'start_date' => $start_date,
-            'start_time' => $start_time,
-            'users' => $users
-        ]);
-    }
-
-    /**
-     *  SCHEDULE編集
-     * 
-     *  @param Request $request
-     *  @return Response
-     */
-    public function updateSchedule(Request $request)
-    {
-        $this->validate($request, Schedule::$rules);
-        $schedule = Schedule::find($request->id);
-        $schedule->title = $request->title;
-        $schedule->start_date = $request->start_date;
-        $schedule->start_time = $request->start_time;
-        $schedule->save();
-
-        foreach($request->users as $user){
-            $schedule->users()->attach($user);
-        }
-
-        return back();
-    }
-
-    /**
      *  SCHEDULE削除
      * 
      *  @param Request $request

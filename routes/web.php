@@ -57,11 +57,7 @@ Route::get('/admin/schedule', 'ScheduleController@getAdminSchedule')->middleware
 
 Route::post('/admin/schedule', 'ScheduleController@createSchedule')->middleware('simple_auth');
 
-Route::get('/admin/schedule/{id}', 'ScheduleController@getEditSchedule')->middleware('simple_auth');
-
-Route::post('/admin/schedule/{id}', 'ScheduleController@updateSchedule')->middleware('simple_auth');
-
-Route::post('/admin/schedule/delete', 'ScheduleController@deleteSchedule')->middleware('simple_auth');
+Route::post('/admin/schedule/delete/{id}', 'ScheduleController@deleteSchedule')->middleware('simple_auth');
 
 Route::get('/admin/profile', 'ProfileController@getAdminProfile')->middleware('simple_auth');
 
@@ -71,7 +67,7 @@ Route::get('/admin/profile/user/{id}', 'UserController@getEditUser')->middleware
 
 Route::post('/admin/profile/user/{id}', 'UserController@updateUser')->middleware('simple_auth');
 
-Route::post('/admin/profile/user/delete', 'UserController@deleteUser')->middleware('simple_auth');
+Route::post('/admin/profile/user/delete/{id}', 'UserController@deleteUser')->middleware('simple_auth');
 
 Route::post('/admin/profile/add/task', 'TaskController@createTask')->middleware('simple_auth');
 

@@ -274,8 +274,8 @@ schedule
 }
 
 .form-schedule .schedules-box .schedule-box .schedule-text .button-box {
-    display: flex;
     width: 20%;
+    text-align: right;
 }
 
 .form-schedule .schedules-box .schedule-box .schedule-text .button-box button {

@@ -58,8 +58,7 @@
                     @endforeach
                 </div>
                 <div class="button-box">
-                    <button class="button-green btn btn-success btn-sm" onclick="location.href='/admin/schedule/{{ $schedule->id }}'">修正</button>
-                    <form action="/admin/schedule/delete" method="post">
+                    <form action="/admin/schedule/delete/{{ $schedule->id }}" method="post">
                         @csrf
                         <input type="hidden" name="id" value="{{ $schedule->id }}">
                         <button class="button-green btn btn-success btn-sm" type="submit">削除</button>

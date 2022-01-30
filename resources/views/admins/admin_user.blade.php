@@ -55,7 +55,7 @@
                 <button class="button btn btn-success btn-sm" type="submit">追加</button>
             </form>
         </div>
-        <form action="/admin/profile/user/delete" method="post" enctype="multipart/form-data">
+        <form action="/admin/profile/user/delete/{{ $id }}" method="post">
             @csrf
             <input type="hidden" name="id" value="{{ $id }}">
             <button class="button btn btn-success btn-sm" type="submit">ユーザー削除</button>
