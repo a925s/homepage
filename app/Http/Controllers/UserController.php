@@ -110,7 +110,6 @@ class UserController extends Controller
         if($upload_image){
             $path = $upload_image->store('uploads', "public");
 
-            dd($path);
             if($path){
                 $this->validate($request, User::$rules);
                 $user = new User;
