@@ -15,6 +15,9 @@
 @section('body_name')
 <body class="app">
 @show
+    <div class="loading">
+        <div class="loading-5"></div>
+    </div>
     <div class="container-fluid">
         <div class="home row">
             <div class="header">
