@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    display: block;
+    display: none;
 }
 
 :root {
@@ -81,6 +81,7 @@
     position: absolute;
     left: 45%;
     top: 45%;
+    display: none;
 }
 
 .loading-5:before {
