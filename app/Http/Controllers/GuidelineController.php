@@ -29,9 +29,9 @@ class GuidelineController extends Controller
      */
     public function getAdminGuideline(Request $request)
     {
-        $guidelines = Guideline::get();
+        $guideline = Guideline::first();
         return view('admins.admin_guideline', [
-            'guidelines' => $guidelines,
+            'guideline' => $guideline,
         ]);
     }
 
@@ -44,9 +44,15 @@ class GuidelineController extends Controller
     public function updateGuideline(Request $request)
     {
         $this->validate($request, Guideline::$rules);
-        $guideline = Guideline::find(1);
-        $guideline->message = $request->message;
-        $guideline->save();
+        $guideline = Guideline::first();
+        if($guideline === null){
+            $guideline = new Guideline;
+            $guideline->message = $request->message;
+            $guideline->save();
+        }else{
+            $guideline->message = $request->message;
+            $guideline->save();
+        }
 
         return redirect('/admin/guideline');
     }

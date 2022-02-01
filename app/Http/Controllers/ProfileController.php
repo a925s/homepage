@@ -32,10 +32,10 @@ class ProfileController extends Controller
      */
     public function getAdminProfile(Request $request)
     {
-        $groups = Group::get();
+        $group = Group::first();
         $users = User::orderBy('created_at', 'asc')->get();
         return view('admins.admin_profile', [
-            'groups' => $groups,
+            'group' => $group,
             'users' => $users
         ]);
     }
@@ -49,26 +49,16 @@ class ProfileController extends Controller
     public function updateGroupProfile(Request $request)
     {
         $this->validate($request, Group::$rules);
-        $group = Group::find(1);
-        $group->message = $request->message;
-        $group->save();
+        $group = Group::first();
+        if($group === null){
+            $group = new Group;
+            $group->message = $request->message;
+            $group->save();
+        }else{
+            $group->message = $request->message;
+            $group->save();
+        }
 
         return redirect('/admin/profile');
-    }
-
-    /**
-     *  ARTICLE追加
-     * 
-     *  @param Request $request
-     *  @return Response
-     */
-    public function createArticle(Request $request)
-    {
-        $this->validate($request, Article::$rules);
-        $article = new Article;
-        $article->title = $request->title;
-        $article->message = $request->message;
-        $article->save();
-        return redirect('/admin/news');
     }
 }
