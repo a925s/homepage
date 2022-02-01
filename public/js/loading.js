@@ -10986,32 +10986,16 @@ return jQuery;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {// スクロールを禁止する関数
-function noScroll(event) {
-  event.preventDefault();
-} //logoの表示
-
-
+/* WEBPACK VAR INJECTION */(function($) {$(function () {
+  var h = $(window).height();
+  $('#load-after').css('display', 'none');
+  $('.loading ,.loading-5').height(h).css('display', 'block');
+});
 $(window).on('load', function () {
-  // スクロール禁止(SP)
-  document.addEventListener('touchmove', noScroll, {
-    passive: false
-  }); // スクロール禁止(PC)
-
-  document.addEventListener('mousewheel', noScroll, {
-    passive: false
-  });
-  $(".loading-5").delay(3600).fadeOut('slow');
-  $(".loading").delay(4500).fadeOut('slow', function () {
-    // スクロール禁止を解除(SP)
-    document.removeEventListener('touchmove', noScroll, {
-      passive: false
-    }); // スクロール禁止を解除(PC)
-
-    document.removeEventListener('mousewheel', noScroll, {
-      passive: false
-    });
-  });
+  //全ての読み込みが完了したら実行
+  $('#loading').delay(900).fadeOut(800);
+  $('#loading-5').delay(600).fadeOut(300);
+  $('#load-after').css('display', 'block');
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
