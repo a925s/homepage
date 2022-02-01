@@ -60,7 +60,7 @@
             <li class="member-profile">
                 <div class="member-profile-box">
                     <div class="member-photo">
-                        <a href="/profile/{{ $user->id }}"><img src="{{ secure_asset('storage/uploads/$user->image_path ') }}" alt="プロフィール画像"></a>
+                        <a href="/profile/{{ $user->id }}"><img src="{{ Storage::url($user->image_path) }}" alt="プロフィール画像"></a>
                     </div>
                     <div class="member-text">
                         <h2>{{  $user->name }}</h2>
