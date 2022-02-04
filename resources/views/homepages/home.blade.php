@@ -6,14 +6,14 @@
 <div class="forest">
     <video src="{{ secure_asset('/img/Forest.mp4') }}" id="forest-video" autoplay muted playsinline></video>
     <div class="video-message">
-        <p class="message1">好きを仕事に。</p>
-        <p class="message2">人生という「ゲーム」をもっと楽しく。</p>
+        <p class="message1">ああああああ。</p>
+        <p class="message2">ああああああああああああ。</p>
     </div>
     <div class="div-image">
         <img src="{{ secure_asset('/img/next.jpg') }}" alt="ホーム画面">
         <div class="img-message">
-            <p class="message3">好きを仕事に。</p>
-            <p class="message4">人生という「ゲーム」をもっと楽しく。</p>
+            <p class="message3">ああああああ。</p>
+            <p class="message4">ああああああああああああ。</p>
         </div>
     </div>
 </div>
